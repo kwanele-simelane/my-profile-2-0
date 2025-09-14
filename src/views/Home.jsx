@@ -13,12 +13,12 @@ import SidebarNav from "../components/SidebarNav";
 import CursorAccent from "../components/CursorAccent";
 
 // images
-import eswatini_marketsquare from "../assets/img/eswatini-marketsquare.png";
-import swift_boookings from "../assets/img/swift-bookings.png";
-import elite_corporate_training from "../assets/img/elite-corporate-training.png";
-import soap_shop_supplies from "../assets/img/soap-shop-supplies.png";
-import tki_sasa from "../assets/img/tki-sasa.png";
-import samke_nkambule from "../assets/img/samke-nkambule.png";
+import eswatini_marketsquare from "../assets/img/eswatini-marketsquare.PNG";
+import swift_boookings from "../assets/img/swift-bookings.PNG";
+import elite_corporate_training from "../assets/img/elite-corporate-training.PNG";
+import soap_shop_supplies from "../assets/img/soap-shop-supplies.PNG";
+import tki_sasa from "../assets/img/tki-sasa.PNG";
+import samke_nkambule from "../assets/img/samke-nkambule.PNG";
 import resume from "../../public/Resume [Updated 26 August 2025].pdf";
 
 const Home = () => {
