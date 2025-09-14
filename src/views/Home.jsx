@@ -25,7 +25,7 @@ const Home = () => {
   const date = new Date();
 
   return (
-    <div className="flex min-h-screen bg-dark text-text font-light">
+    <div className="relative flex min-h-screen bg-dark text-text font-light">
       <CursorAccent />
       {/* Left Pane (Sidebar) */}
       <aside className="hidden lg:flex w-2/5 pl-30 py-8 pr-8 flex-col justify-between fixed top-0 left-0 h-screen rounded-2xl">
@@ -45,9 +45,9 @@ const Home = () => {
           Currently hacking on &mdash;{" "}
           <a
             target="_blank"
-            href="https://github.com/kwanele-simelane/exchange-rates"
+            href="https://github.com/kwanele-simelane/jpa-mobile-wallet"
             className="underline italic hover:no-underline text-primary">
-            Exchange Rates API
+            mobile wallets API
           </a>
         </p>
 
@@ -68,10 +68,82 @@ const Home = () => {
         </div>
       </aside>
 
+      {/* mobile nav */}
+      <div className="w-full fixed top-0 left-0 !bg-gradient-to-r !from-primary !to-dark rounded-b-2xl shadow-lg py-[3px] z-50 sm:hidden">
+        <ul className="flex gap-4 justify-center">
+          <li>
+            <a
+              className="text-xs font-light text-gray-300 hover:underline"
+              href="#about">
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-xs font-light text-gray-300 hover:underline"
+              href="#experience">
+              Experience
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-xs font-light text-gray-300 hover:underline"
+              href="#projects">
+              Projects
+            </a>
+          </li>
+        </ul>
+      </div>
+
       {/* Right Pane (Main Content) */}
-      <main className="flex-1 lg:ml-[40%] px-12 pb-8 overflow-y-auto">
-        <section id="about" className="pt-16">
-          <p className="text-gray-400 max-w-prose">
+      <main className="flex-1 lg:ml-[40%] px-4 sm:px-12 pb-8 overflow-y-auto">
+        <section className="sm:hidden">
+          <div className="pt-16">
+            <h2 className="font-bold text-3xl text-gray-300">
+              Kwanele Simelane
+            </h2>
+            <p className="text-sm mb-2 font-light">Software Engineer</p>
+            <small className="text-md text-text font-semibold">
+              Exploring the data, & fintech landscape
+            </small>
+          </div>
+
+          <p className="text-xs my-6">
+            <FontAwesomeIcon
+              icon={faPlay}
+              className="mr-2 text-primary blinking"
+            />
+            Currently hacking on &mdash;{" "}
+            <a
+              target="_blank"
+              href="https://github.com/kwanele-simelane/jpa-mobile-wallet"
+              className="underline italic hover:no-underline text-primary">
+              mobile wallets API
+            </a>
+          </p>
+
+          <div className="flex space-x-2 mt-8">
+            <a target="_blank" href="https://github.com/kwanele-simelane">
+              <FontAwesomeIcon icon={faGithub} className="text-lg" />
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/kwanele-dev/">
+              <FontAwesomeIcon icon={faLinkedin} className="text-lg" />
+            </a>
+            <a target="_blank" href="mailto:sizwekwanele14@gmail.com">
+              <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
+            </a>
+
+            <p className="text-xs">&mdash; &copy; | {date.getFullYear()}</p>
+          </div>
+
+          <hr className="mt-4 !border-primary" />
+        </section>
+
+        <section id="about" className="pt-8 sm:!pt-16">
+          <h3 className="sm:hidden text-xl sm:text-3xl text-gray-300 font-semibold mb-4 underline">
+            About
+          </h3>
+          <p className="text-gray-400 text-[13px] sm:text-sm max-w-prose">
             Hi I'm Kwanele, a Software Developer. Passionate about technology, I
             craft software that lives at the crossroads of elegance and utility,
             where clean but sophisticated technology meets the pulse of everyday
@@ -95,18 +167,18 @@ const Home = () => {
           </p>
         </section>
 
-        <section id="experience" className="pt-16">
-          <h2 className="text-3xl text-gray-300 font-semibold mb-4 underline">
+        <section id="experience" className="pt-12 sm:!pt-16">
+          <h2 className="text-xl sm:text-3xl text-gray-300 font-semibold mb-4 underline">
             Work Experience
           </h2>
-          <div className="flex gap-8 my-4 max-w-prose">
-            <p className="w-1/4">2023 &mdash; Present</p>
-            <div className="w-3/4">
+          <div className="flex flex-col sm:flex-row gap-8 my-4 max-w-prose">
+            <p className="w-full sm:w-1/4">2023 &mdash; Present</p>
+            <div className="w-full sm:w-3/4">
               <h3 className="font-bold uppercase">
                 Fullstack Developer &mdash; Digimage
               </h3>
 
-              <p className="max-w-prose text-gray-400 text-sm">
+              <p className="max-w-prose text-gray-400 text-[13px] sm:text-sm">
                 I contribute in the upgrading of systems, integrating payments
                 and customizing interfaces, ensuring applications are built to
                 meet industry standard whilst employing best practices to
@@ -114,29 +186,29 @@ const Home = () => {
               </p>
 
               <div className="flex gap-2 my-3">
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   Laravel
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   React
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   SQL
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   Git
                 </span>
               </div>
             </div>
           </div>
-          <div className="flex gap-8 my-4 max-w-prose">
-            <p className="w-1/4">2021 &mdash; 2023</p>
-            <div className="w-3/4">
-              <h3 className="font-bold uppercase">
+          <div className="flex flex-col sm:flex-row gap-8 my-4 max-w-prose">
+            <p className="w-full sm:w-1/4">2021 &mdash; 2023</p>
+            <div className="w-full sm:w-3/4">
+              <h3 className="font-bold uppercase text-lg">
                 Web Developer &mdash; FNB Eswatini
               </h3>
 
-              <p className="max-w-prose text-gray-400 text-sm">
+              <p className="max-w-prose text-gray-400 text-[13px] sm:text-sm">
                 At FNB Eswatini, I led the transformation of the Eswatini
                 MarketSquare Website, creating a centralized hub for everyday
                 services across the country. Taking over from an external agency
@@ -147,30 +219,30 @@ const Home = () => {
                 connecting users with essential services seamlessly.
               </p>
 
-              <div className="flex gap-2 my-3">
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+              <div className="flex items-center gap-2 my-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   PHP
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   React
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   WordPress
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
-                  Google Analytics
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
+                  GA
                 </span>
               </div>
             </div>
           </div>
-          <div className="flex gap-8 my-4 max-w-prose">
-            <p className="w-1/4">2021</p>
-            <div className="w-3/4">
+          <div className="flex flex-col sm:flex-row gap-8 my-4 max-w-prose">
+            <p className="w-full sm:w-1/4">2021</p>
+            <div className="w-full sm:w-3/4">
               <h3 className="font-bold uppercase">
                 Web Developer &mdash; ScopeHost
               </h3>
 
-              <p className="max-w-prose text-gray-400 text-sm">
+              <p className="max-w-prose text-gray-400 text-[13px] sm:text-sm">
                 At ScopeHost, I specialized in project management and
                 coordination, web application development, providing technical
                 support for email clients and virtual services. I also
@@ -178,20 +250,14 @@ const Home = () => {
                 secure, reliable, and scalable solutions for diverse clients.
               </p>
 
-              <div className="flex gap-2 my-3">
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
-                  VMWare
-                </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
-                  MS Office
-                </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+              <div className="flex items-center gap-2 my-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   Adobe Suite
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   WordPress
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   PHP
                 </span>
               </div>
@@ -200,22 +266,22 @@ const Home = () => {
 
           <a
             target="_blank"
-            className="my-4 inline-block underline hover:!no-underline"
+            className="my-1 sm:my-4 inline-block underline hover:!no-underline"
             href={resume}>
             Download my resumé
             <FontAwesomeIcon icon={faExternalLink} className="text-sm ml-2" />
           </a>
         </section>
 
-        <section id="projects" className="pt-16 max-w-prose">
-          <h2 className="text-3xl text-gray-300 font-semibold mb-4 underline">
+        <section id="projects" className="pt-12 sm:!pt-16 max-w-prose">
+          <h2 className="text-xl sm:text-3xl text-gray-300 font-semibold mb-4 underline">
             Recent projects
           </h2>
 
           <a
             href="https://marketsquare.co.sz/"
             target="_blank"
-            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-4 hover:bg-text/15 rounded-md transition-all duration-300">
+            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-0 sm:p-4 hover:bg-text/15 rounded-md transition-all duration-300">
             <FontAwesomeIcon
               icon={faArrowRight}
               className="absolute top-2 right-2 opacity-0 transition-all duration-300 group-hover:opacity-100 -rotate-45"
@@ -228,25 +294,25 @@ const Home = () => {
               />
             </div>
 
-            <div className="text-gray-200 col-span-3">
+            <div className="text-gray-200 col-span-4 sm:col-span-3">
               <h3 className="font-semibold">
                 Eswatini MarketSquare &mdash; with FNB Eswatini
               </h3>
-              <p className="text-sm">
+              <p className="text-[13px] sm:text-sm">
                 A project that seeks to bring all the everyday resources to one
                 square. "Do you need a plumber? Find them on MarketSquare!"
               </p>
               <div className="flex items-start gap-2 my-2">
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   PHP
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   JavaScript
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   MySQL
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   GA
                 </span>
               </div>
@@ -255,7 +321,7 @@ const Home = () => {
           <a
             href="https://ectconsulting360.com/"
             target="_blank"
-            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-4 hover:bg-text/15 rounded-md transition-all duration-300">
+            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-0 sm:p-4 hover:bg-text/15 rounded-md transition-all duration-300">
             <FontAwesomeIcon
               icon={faArrowRight}
               className="absolute top-2 right-2 opacity-0 transition-all duration-300 group-hover:opacity-100 -rotate-45"
@@ -268,26 +334,26 @@ const Home = () => {
               />
             </div>
 
-            <div className="text-gray-200 col-span-3">
+            <div className="text-gray-200 col-span-4 sm:col-span-3">
               <h3 className="font-semibold">
                 Elite Corporate Training & Consulting 360 &mdash; Freelance
               </h3>
-              <p className="text-sm">
+              <p className="text-[13px] sm:text-sm">
                 Elite Corporate Training is the UK leading training provider for
                 cutting-edge short term training courses aimed at capacitating
                 employees to improve performance in the workplace.
               </p>
               <div className="flex items-start gap-2 my-2">
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   WordPress
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   Stripe
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   SemRush
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   GA
                 </span>
               </div>
@@ -296,7 +362,7 @@ const Home = () => {
           <a
             href="https://swiftbookings.salvsystems.com"
             target="_blank"
-            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-4 hover:bg-text/15 rounded-md transition-all duration-300">
+            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-0 sm:p-4 hover:bg-text/15 rounded-md transition-all duration-300">
             <FontAwesomeIcon
               icon={faArrowRight}
               className="absolute top-2 right-2 opacity-0 transition-all duration-300 group-hover:opacity-100 -rotate-45"
@@ -309,26 +375,26 @@ const Home = () => {
               />
             </div>
 
-            <div className="text-gray-200 col-span-3">
+            <div className="text-gray-200 col-span-4 sm:col-span-3">
               <h3 className="font-semibold">
                 Swift Bookings &mdash; with Digimage
               </h3>
-              <p className="text-sm">
+              <p className="text-[13px] sm:text-sm">
                 Fast, reliable and secure booking services at the palm of your
                 hand. This solution seeks to localise booking services and
                 provide and easy to use, go-to platform for everything travel.
               </p>
               <div className="flex items-start gap-2 my-2">
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   Laravel
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   React
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   MySQL
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   Open API
                 </span>
               </div>
@@ -337,7 +403,7 @@ const Home = () => {
           <a
             href="https://www.tkieswatini.org/sasa"
             target="_blank"
-            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-4 hover:bg-text/15 rounded-md transition-all duration-300">
+            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-0 sm:p-4 hover:bg-text/15 rounded-md transition-all duration-300">
             <FontAwesomeIcon
               icon={faArrowRight}
               className="absolute top-2 right-2 opacity-0 transition-all duration-300 group-hover:opacity-100 -rotate-45"
@@ -351,23 +417,23 @@ const Home = () => {
               />
             </div>
 
-            <div className="text-gray-200 col-span-3">
+            <div className="text-gray-200 col-span-4 sm:col-span-3">
               <h3 className="font-semibold">
                 SaSa &mdash; with The Knowledge Institute
               </h3>
-              <p className="text-sm">
+              <p className="text-[13px] sm:text-sm">
                 TKI proposes SaSa, a mobile-friendly web platform that would
                 enable high school graduates to quickly and inexpensively apply
                 for tertiary education.
               </p>
               <div className="flex items-start gap-2 my-2">
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   Django
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   React
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   Figma
                 </span>
               </div>
@@ -376,7 +442,7 @@ const Home = () => {
           <a
             href="https://soapshopsupplies.com"
             target="_blank"
-            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-4 hover:bg-text/15 rounded-md transition-all duration-300">
+            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-0 sm:p-4 hover:bg-text/15 rounded-md transition-all duration-300">
             <FontAwesomeIcon
               icon={faArrowRight}
               className="absolute top-2 right-2 opacity-0 transition-all duration-300 group-hover:opacity-100 -rotate-45"
@@ -389,18 +455,18 @@ const Home = () => {
               />
             </div>
 
-            <div className="text-gray-200 col-span-3">
+            <div className="text-gray-200 col-span-4 sm:col-span-3">
               <h3 className="font-semibold">
                 Soap Shop Supplies &mdash; with ScopeHost
               </h3>
-              <p className="text-sm">
+              <p className="text-[13px] sm:text-sm">
                 Building this website included exercises in photography, and
                 photo editing, graphics manipulation and critical thinking
                 capabilities to best craft the website specific to the
                 organisation's needs
               </p>
               <div className="flex items-start gap-2 my-2">
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   WordPress
                 </span>
               </div>
@@ -410,7 +476,7 @@ const Home = () => {
           <a
             href="https://samkelisiwenkambule.com/"
             target="_blank"
-            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-4 hover:bg-text/15 rounded-md transition-all duration-300">
+            className="relative group grid grid-cols-4 auto-cols-fr gap-2 my-4 p-0 sm:p-4 hover:bg-text/15 rounded-md transition-all duration-300">
             <FontAwesomeIcon
               icon={faArrowRight}
               className="absolute top-2 right-2 opacity-0 transition-all duration-300 group-hover:opacity-100 -rotate-45"
@@ -423,24 +489,24 @@ const Home = () => {
               />
             </div>
 
-            <div className="text-gray-200 col-span-3">
+            <div className="text-gray-200 col-span-4 sm:col-span-3">
               <h3 className="font-semibold">
                 [upcoming] Samkelisiwe Nkambule &mdash; Freelance
               </h3>
-              <p className="text-sm">
+              <p className="text-[13px] sm:text-sm">
                 Samkelisiwe Nkambule — a creative spirit based in Mbabane,
                 Eswatini is passionate about music, poetry, and public
                 relations, and loves blending artistic expression with
                 meaningful communication.
               </p>
               <div className="flex items-start gap-2 my-2">
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   WordPress
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
                   Spotify API
                 </span>
-                <span className="text-[10px] bg-primary text-gray-300 rounded-full px-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   GA
                 </span>
               </div>
@@ -459,9 +525,11 @@ const Home = () => {
           </Link>
         </section>
 
-        <section id="footer" className="pt-16">
-          <h2 className="text-3xl font-semibold mb-4">Built with ❤</h2>
-          <p className="text-gray-400">
+        <section id="footer" className="pt-12 sm:!pt-16">
+          <h2 className="text-xl sm:text-3xl font-semibold mb-4">
+            Built with ❤
+          </h2>
+          <p className="text-gray-400 text-xs sm:text-sm">
             Designed in Figma, hand-crafted by yours truly. <br />
             Built w/ React.js & Tailwind, deployed w/ Netlify. Text set in
             Poppins typeface.
