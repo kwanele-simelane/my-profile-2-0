@@ -149,8 +149,8 @@ const Home = () => {
             gap between innovation and the people it’s meant to serve.
             <br className="my-2 block" />
             <br className="my-2 block" />
-            I specializing in API integrations and accessibility, integrating
-            payments and customizing interfaces, ensuring applications are built
+            I specialize in API integrations and accessibility, integrating
+            payment solutions and customizing interfaces, ensuring applications are built
             to meet industry standard whilst employing best practices to deliver
             inclusive user experiences
             <br className="my-2 block" />
