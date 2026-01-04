@@ -31,7 +31,7 @@ const Home = () => {
       <aside className="hidden lg:flex w-2/5 pl-30 py-8 pr-8 flex-col justify-between fixed top-0 left-0 h-screen rounded-2xl">
         <div className="pt-8">
           <h2 className="font-bold text-4xl text-gray-300">Kwanele Simelane</h2>
-          <p className="text-md mb-2 font-light">Software Engineer</p>
+          <p className="text-md mb-2 font-light">Software & Systems Engineer</p>
           <small className="text-lg text-text font-semibold">
             Exploring the data, & fintech landscape
           </small>
@@ -144,26 +144,16 @@ const Home = () => {
             About
           </h3>
           <p className="text-gray-400 text-[13px] sm:text-sm max-w-prose">
-            Hi I'm Kwanele, a Software Developer. Passionate about technology, I
-            craft software that lives at the crossroads of elegance and utility,
-            where clean but sophisticated technology meets the pulse of everyday
-            life. My focus is on transforming complex problems into intuitive
-            digital experiences, bridging the gap between innovation and the
-            people it’s meant to serve.
+            Hi I'm Kwanele, a Software Developer. My focus is on transforming
+            complex problems into intuitive digital experiences, bridging the
+            gap between innovation and the people it’s meant to serve.
             <br className="my-2 block" />
             <br className="my-2 block" />
-            Currently a fullstack developer at <a href="#">Digimage</a>,
-            specializing in API integrations and accessibility, I contribute in
-            the upgrading of systems, integrating payments and customizing
-            interfaces, ensuring applications are built to meet industry
-            standard whilst employing best practices to deliver inclusive user
-            experiences
+            I specializing in API integrations and accessibility, integrating
+            payments and customizing interfaces, ensuring applications are built
+            to meet industry standard whilst employing best practices to deliver
+            inclusive user experiences
             <br className="my-2 block" />
-            <br className="my-2 block" />
-            I've had the opportunity to express my abilities with established
-            industry players including <b>FNB Eswatini</b>, <b>ScopeHost</b>,
-            and volunteer placements with <b>The Knowledge Institute</b>,{" "}
-            <b>Emlalatini Development Centre</b>, to name a few
           </p>
         </section>
 
@@ -172,7 +162,7 @@ const Home = () => {
             Work Experience
           </h2>
           <div className="flex flex-col sm:flex-row gap-8 my-4 max-w-prose">
-            <p className="w-full sm:w-1/4">2023 &mdash; Present</p>
+            <p className="w-full sm:w-1/4">Jun. 2023 &mdash; Dec. 2025</p>
             <div className="w-full sm:w-3/4">
               <h3 className="font-bold uppercase">
                 Fullstack Developer &mdash; Digimage
@@ -202,7 +192,7 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-8 my-4 max-w-prose">
-            <p className="w-full sm:w-1/4">2021 &mdash; 2023</p>
+            <p className="w-full sm:w-1/4">Dec. 2021 &mdash; Mar. 2023</p>
             <div className="w-full sm:w-3/4">
               <h3 className="font-bold uppercase text-lg">
                 Web Developer &mdash; FNB Eswatini
@@ -236,7 +226,7 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-8 my-4 max-w-prose">
-            <p className="w-full sm:w-1/4">2021</p>
+            <p className="w-full sm:w-1/4">Aug. 2021 &mdash; Nov. 2021</p>
             <div className="w-full sm:w-3/4">
               <h3 className="font-bold uppercase">
                 Web Developer &mdash; ScopeHost
