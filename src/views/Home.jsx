@@ -150,9 +150,9 @@ const Home = () => {
             <br className="my-2 block" />
             <br className="my-2 block" />
             I specialize in API integrations and accessibility, integrating
-            payment solutions and customizing interfaces, ensuring applications are built
-            to meet industry standard whilst employing best practices to deliver
-            inclusive user experiences
+            payment solutions and customizing interfaces, ensuring applications
+            are built to meet industry standard whilst employing best practices
+            to deliver inclusive user experiences
             <br className="my-2 block" />
           </p>
         </section>
@@ -161,6 +161,42 @@ const Home = () => {
           <h2 className="text-xl sm:text-3xl text-gray-300 font-semibold mb-4 underline">
             Work Experience
           </h2>
+          <div className="flex flex-col sm:flex-row gap-8 my-4 max-w-prose">
+            <p className="w-full sm:w-1/4">Jan. 2026 &mdash; To date</p>
+            <div className="w-full sm:w-3/4">
+              <h3 className="font-bold uppercase">
+                IT Officer &mdash; Letshego Financial Services Eswatini
+              </h3>
+
+              <p className="max-w-prose text-gray-400 text-[13px] sm:text-sm">
+                I am responsible for ensuring the stability, security, and
+                continuous improvement of the technology infrastructure that
+                supports both internal business operations and digital banking
+                services across Letshego Financial Services. My role combines
+                technical operations, systems administration, digital banking
+                support, cybersecurity, infrastructure management, project
+                implementation, and user support. I work closely with business
+                units, vendors, and management to ensure technology enables
+                efficient service delivery while maintaining regulatory and
+                security standards.
+              </p>
+
+              <div className="flex gap-2 my-3">
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
+                  Banking
+                </span>
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
+                  IT Support
+                </span>
+                <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
+                  EoD
+                </span>
+                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
+                  Business Continuity
+                </span>
+              </div>
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row gap-8 my-4 max-w-prose">
             <p className="w-full sm:w-1/4">Jun. 2023 &mdash; Dec. 2025</p>
             <div className="w-full sm:w-3/4">
