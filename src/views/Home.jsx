@@ -191,9 +191,6 @@ const Home = () => {
                 <span className="text-[10px] !bg-gradient-to-r from-primary to-dark text-gray-300 rounded-full px-3">
                   EoD
                 </span>
-                <span className="text-[10px] !bg-gradient-to-l from-primary to-dark text-gray-300 rounded-full px-3">
-                  Business Continuity
-                </span>
               </div>
             </div>
           </div>
